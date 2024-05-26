@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.demo.controllers.TabPaneController">
+    <children>
+        <TabPane fx:id="tabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE"
+                 AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                 AnchorPane.topAnchor="0.0">
+            <tabs>
+                <Tab onSelectionChanged="#updateStudent" text="Students">
+                    <content>
+                        <fx:include fx:id="tabStudent" source="student.fxml"/>
+                    </content>
+                </Tab>
+                <Tab onSelectionChanged="#updateCourses" text="Courses">
+                    <content>
+                        <fx:include fx:id="tabCourse" source="course.fxml"/>
+                    </content>
+                </Tab>
+                <Tab onSelectionChanged="#updateResults" text="Results">
+                    <content>
+                        <fx:include fx:id="tabResult" source="result.fxml"/>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
